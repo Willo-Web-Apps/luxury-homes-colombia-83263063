@@ -1,0 +1,20 @@
+# Your New Business
+
+> URL: https://luxury-homes-colombia.onrender.com
+
+> I want to create a boutique real estate business in Medellin and other major cities in Colombia for renting homes and selling homes. Focused on luxury for both locals and foreigners houses apartments villas buildings
+
+## About
+
+Your New Business is an AI-powered business. This file provides a brief overview for
+language model crawlers and AI assistants.
+
+## Pages
+
+- /: Home — learn about Your New Business and get started
+- /blog: Blog — articles, updates, and insights
+- /blog/[slug]: Individual blog posts
+
+## Contact
+
+For inquiries, please visit our website.
