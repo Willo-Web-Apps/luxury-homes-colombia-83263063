@@ -8,7 +8,10 @@ interface Props {
   description?: string;
 }
 
-const { title = "Your New Business", description = "I want to create a boutique real estate business in Medellin and other major cities in Colombia for renting homes and selling homes. Focused on luxury for both locals and foreigners houses apartments villas buildings" } = Astro.props;
+const {
+  title = "Altura Living — Luxury Real Estate in Medellin & Colombia",
+  description = "Boutique luxury real estate in Medellín, Bogotá, and Cartagena. Handpicked villas, penthouses, and apartments for discerning buyers and renters. Fully bilingual concierge service."
+} = Astro.props;
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
@@ -18,14 +21,19 @@ const { title = "Your New Business", description = "I want to create a boutique 
     <meta name="description" content={description} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#1B4D3E" />
     <title>{title}</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Your New Business",
-      "description": "I want to create a boutique real estate business in Medellin and other major cities in Colombia for renting homes and selling homes. Focused on luxury for both locals and foreigners houses apartments villas buildings",
-      "url": "https://luxury-homes-colombia.onrender.com"
+      "@type": "RealEstateAgent",
+      "name": "Altura Living",
+      "description": "Boutique luxury real estate in Medellín, Bogotá, and Cartagena. Handpicked villas, penthouses, and apartments for discerning buyers and renters.",
+      "url": "https://luxury-homes-colombia.onrender.com",
+      "areaServed": ["Medellín", "Bogotá", "Cartagena"],
+      "serviceType": "Luxury Real Estate Sales and Rentals",
+      "availableLanguage": ["English", "Spanish"]
     }
     </script>
   </head>

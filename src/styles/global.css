@@ -1,57 +1,63 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
 
 /* -----------------------------------------------------------------------
-   Design Tokens — customize these to change the entire site's look.
-   The Product Agent should edit this @theme block to match the business:
-   - Swap fonts (Google Fonts @import above, font families below)
-   - Change brand colors to match the business personality
-   - Flip surface colors for dark theme (swap light/dark values)
+   Altura Living — Design Tokens
+   Deep charcoal + warm ivory foundation
+   Emerald green (#1B4D3E) dominant brand color
+   Gold (#C9A84C) secondary accent
+   Fraunces (editorial serif display) + DM Sans (clean body)
    ----------------------------------------------------------------------- */
 
 @theme {
-  /* Typography — replace with distinctive Google Fonts for the business */
-  --font-display: ui-sans-serif, system-ui, sans-serif;
-  --font-body: ui-sans-serif, system-ui, sans-serif;
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
 
-  /* Brand color scale — agent should customize per business */
-  --color-brand-50: oklch(0.97 0.01 250);
-  --color-brand-100: oklch(0.93 0.02 250);
-  --color-brand-200: oklch(0.87 0.04 250);
-  --color-brand-400: oklch(0.70 0.12 250);
-  --color-brand-500: oklch(0.60 0.16 250);
-  --color-brand-600: oklch(0.50 0.16 250);
+  /* Brand color scale — Emerald green */
+  --color-brand-50:  oklch(0.97 0.02 162);
+  --color-brand-100: oklch(0.93 0.04 162);
+  --color-brand-200: oklch(0.85 0.07 162);
+  --color-brand-400: oklch(0.55 0.12 162);
+  --color-brand-500: oklch(0.43 0.13 162);   /* ~#1B4D3E emerald */
+  --color-brand-600: oklch(0.35 0.11 162);
 
-  /* Surface colors — light theme defaults. Flip for dark theme:
-     surface-50 becomes near-black, surface-900 becomes near-white */
-  --color-surface-50: oklch(0.985 0.002 250);
-  --color-surface-100: oklch(0.96 0.004 250);
-  --color-surface-200: oklch(0.92 0.006 250);
-  --color-surface-800: oklch(0.30 0.015 250);
-  --color-surface-900: oklch(0.20 0.015 250);
-  --color-surface-950: oklch(0.14 0.012 250);
+  /* Gold accent */
+  --color-gold-400: oklch(0.79 0.14 80);
+  --color-gold-500: oklch(0.73 0.14 78);     /* ~#C9A84C gold */
+  --color-gold-600: oklch(0.63 0.13 78);
+
+  /* Surface colors — warm ivory / charcoal */
+  --color-surface-50:  oklch(0.985 0.006 80);   /* warm ivory white */
+  --color-surface-100: oklch(0.96 0.008 80);    /* soft cream */
+  --color-surface-200: oklch(0.90 0.010 80);    /* warm light grey */
+  --color-surface-800: oklch(0.28 0.015 80);    /* dark charcoal warm */
+  --color-surface-900: oklch(0.18 0.012 80);    /* near-black charcoal */
+  --color-surface-950: oklch(0.12 0.008 80);    /* deep charcoal */
 }
 
 /* Page-load animations — CSS only, no JS required */
 @keyframes fadeIn {
   from { opacity: 0; }
-  to { opacity: 1; }
+  to   { opacity: 1; }
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out both;
+  animation: fadeIn 0.8s ease-out both;
 }
 
 .animate-slide-up {
-  animation: slideUp 0.6s ease-out both;
+  animation: slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Staggered animation delays for cascading reveals */
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
+.delay-100 { animation-delay: 0.10s; }
+.delay-200 { animation-delay: 0.20s; }
+.delay-300 { animation-delay: 0.32s; }
+.delay-400 { animation-delay: 0.45s; }
+.delay-500 { animation-delay: 0.58s; }

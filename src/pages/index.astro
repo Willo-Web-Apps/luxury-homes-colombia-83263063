@@ -1,35 +1,562 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Your New Business" description="I want to create a boutique real estate business in Medellin and other major cities in Colombia for renting homes and selling homes. Focused on luxury for both locals and foreigners houses apartments villas buildings">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Your New Business
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        I want to create a boutique real estate business in Medellin and other major cities in Colombia for renting homes and selling homes. Focused on luxury for both locals and foreigners houses apartments villas buildings
-      </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
-        </a>
+<Base
+  title="Altura Living — Luxury Real Estate in Medellin & Colombia"
+  description="Boutique luxury real estate in Medellin, Bogotá, and Cartagena. Handpicked villas, penthouses, and apartments for discerning buyers and renters. Bilingual concierge service."
+>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="relative min-h-[90vh] flex items-center overflow-hidden">
+
+    <!-- Layered gradient background — warm Andean atmosphere -->
+    <div class="absolute inset-0" style="background:
+      radial-gradient(ellipse at 15% 60%, oklch(0.43 0.13 162 / 0.12), transparent 55%),
+      radial-gradient(ellipse at 85% 20%, oklch(0.73 0.14 78 / 0.07), transparent 45%),
+      radial-gradient(ellipse at 60% 90%, oklch(0.43 0.13 162 / 0.06), transparent 40%),
+      linear-gradient(160deg, oklch(0.985 0.006 80) 0%, oklch(0.96 0.008 80) 60%, oklch(0.93 0.04 162 / 0.3) 100%);
+    "></div>
+
+    <!-- Decorative vertical line + dot motif -->
+    <div class="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold-500/30 to-transparent hidden lg:block"></div>
+    <div class="absolute right-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-brand-500/20 to-transparent hidden lg:block"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div class="max-w-4xl">
+
+        <!-- Eyebrow -->
+        <div class="animate-slide-up flex items-center gap-3 mb-8">
+          <span class="inline-block w-8 h-px bg-gold-500"></span>
+          <span class="text-xs font-semibold tracking-[0.2em] uppercase text-gold-500 font-body">Boutique Luxury Real Estate · Colombia</span>
+        </div>
+
+        <!-- H1 -->
+        <h1 class="animate-slide-up delay-100 font-display font-bold tracking-tight text-surface-900 leading-[1.08]" style="font-size: clamp(2.6rem, 6vw, 5.5rem);">
+          Colombia's Most<br/>
+          <em class="not-italic" style="color: oklch(0.43 0.13 162);">Exclusive Addresses,</em><br/>
+          Curated for You
+        </h1>
+
+        <!-- Sub -->
+        <p class="animate-slide-up delay-200 mt-7 text-lg md:text-xl text-surface-800/65 max-w-2xl leading-relaxed font-body font-light">
+          Boutique luxury real estate in Medellín and Colombia's finest cities — handpicked villas, penthouses, and apartments for discerning buyers and renters.
+        </p>
+
+        <!-- CTAs -->
+        <div class="animate-slide-up delay-300 mt-10 flex flex-col sm:flex-row gap-4 items-start">
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-base text-white transition-all duration-200 hover:scale-[1.02] hover:shadow-lg"
+            style="background: oklch(0.43 0.13 162); hover:background: oklch(0.35 0.11 162);"
+          >
+            Schedule a Private Consultation
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+            </svg>
+          </a>
+          <a
+            href="#listings"
+            class="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-base transition-colors duration-150 border"
+            style="border-color: oklch(0.43 0.13 162 / 0.35); color: oklch(0.43 0.13 162);"
+          >
+            Explore Properties
+          </a>
+        </div>
+
+        <!-- Microcopy -->
+        <p class="animate-slide-up delay-400 mt-4 text-sm text-surface-800/40 font-body">
+          Fully bilingual · English & Spanish · No obligation
+        </p>
+      </div>
+
+      <!-- Floating stat cards — absolutely positioned -->
+      <div class="animate-fade-in delay-500 hidden lg:flex flex-col gap-4 absolute right-8 xl:right-16 top-1/2 -translate-y-1/2">
+        <div class="bg-white/80 backdrop-blur-sm border border-surface-200 rounded-xl p-5 shadow-sm w-52">
+          <p class="text-3xl font-bold font-display text-surface-900">$250K</p>
+          <p class="text-xs text-surface-800/50 mt-1 font-body">Entry price for luxury apartments</p>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm border border-surface-200 rounded-xl p-5 shadow-sm w-52" style="border-left: 3px solid oklch(0.73 0.14 78);">
+          <p class="text-3xl font-bold font-display" style="color: oklch(0.43 0.13 162);">3 cities</p>
+          <p class="text-xs text-surface-800/50 mt-1 font-body">Medellín · Bogotá · Cartagena</p>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm border border-surface-200 rounded-xl p-5 shadow-sm w-52">
+          <p class="text-3xl font-bold font-display text-surface-900">100%</p>
+          <p class="text-xs text-surface-800/50 mt-1 font-body">Bilingual concierge service</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
-        </a>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       SOCIAL PROOF BAR
+  ═══════════════════════════════════════════════════════════════ -->
+  <section style="background: oklch(0.18 0.012 80);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-3xl md:text-4xl font-bold font-display text-white">200+</p>
+          <p class="text-sm text-white/50 mt-1 font-body">Luxury properties placed</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-bold font-display" style="color: oklch(0.73 0.14 78);">12+</p>
+          <p class="text-sm text-white/50 mt-1 font-body">Nationalities served</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-bold font-display text-white">$1.5M</p>
+          <p class="text-sm text-white/50 mt-1 font-body">Top single-sale transaction</p>
+        </div>
+        <div>
+          <p class="text-3xl md:text-4xl font-bold font-display" style="color: oklch(0.73 0.14 78);">98%</p>
+          <p class="text-sm text-white/50 mt-1 font-body">Client satisfaction rate</p>
+        </div>
       </div>
     </div>
   </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       PROPERTY TYPES / LISTINGS TEASER
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="listings" class="py-20 md:py-28 lg:py-32 bg-surface-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="max-w-2xl mb-14 animate-slide-up">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase mb-4" style="color: oklch(0.73 0.14 78);">
+          <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+          Our Portfolio
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-surface-900 font-display">
+          Every property is personally vetted — nothing less than extraordinary
+        </h2>
+        <p class="mt-4 text-lg text-surface-800/60 leading-relaxed font-body">
+          From sky-high Medellín penthouses to Cartagena colonial villas, each listing in our portfolio represents the upper tier of Colombian real estate.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Card 1: Penthouses -->
+        <div class="group rounded-2xl overflow-hidden border border-surface-200 bg-white hover:shadow-xl transition-shadow duration-300 animate-slide-up delay-100">
+          <!-- Visual placeholder using CSS gradient -->
+          <div class="h-52 relative overflow-hidden" style="background: linear-gradient(135deg, oklch(0.43 0.13 162 / 0.9) 0%, oklch(0.28 0.015 80) 100%);">
+            <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.05) 20px, rgba(255,255,255,0.05) 40px);"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="text-xs font-semibold tracking-widest uppercase text-white/60 font-body">Medellín · El Poblado</span>
+            </div>
+            <div class="absolute top-4 right-4">
+              <span class="text-xs font-semibold px-3 py-1 rounded-full text-white font-body" style="background: oklch(0.73 0.14 78 / 0.85);">For Sale</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold font-display text-surface-900 group-hover:text-brand-500 transition-colors">Sky Penthouses</h3>
+            <p class="mt-2 text-sm text-surface-800/60 leading-relaxed font-body">Full-floor penthouses in El Poblado and Laureles, with panoramic Andes views and private rooftop terraces.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm font-semibold text-surface-800/50 font-body">From <strong class="text-surface-900">$350,000 USD</strong></span>
+              <span class="text-xs text-brand-500 font-semibold font-body">View listings →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Villas -->
+        <div class="group rounded-2xl overflow-hidden border border-surface-200 bg-white hover:shadow-xl transition-shadow duration-300 animate-slide-up delay-200">
+          <div class="h-52 relative overflow-hidden" style="background: linear-gradient(135deg, oklch(0.55 0.09 120 / 0.8) 0%, oklch(0.35 0.11 162) 100%);">
+            <div class="absolute inset-0 opacity-15" style="background-image: repeating-linear-gradient(-45deg, transparent, transparent 20px, rgba(255,255,255,0.06) 20px, rgba(255,255,255,0.06) 40px);"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="text-xs font-semibold tracking-widest uppercase text-white/60 font-body">Cartagena · Manga</span>
+            </div>
+            <div class="absolute top-4 right-4">
+              <span class="text-xs font-semibold px-3 py-1 rounded-full text-white font-body" style="background: oklch(0.43 0.13 162 / 0.85);">For Rent</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold font-display text-surface-900 group-hover:text-brand-500 transition-colors">Colonial Villas</h3>
+            <p class="mt-2 text-sm text-surface-800/60 leading-relaxed font-body">Restored colonial villas and gated haciendas in Cartagena and Bogotá's most coveted neighborhoods.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm font-semibold text-surface-800/50 font-body">From <strong class="text-surface-900">$3,500 USD/mo</strong></span>
+              <span class="text-xs text-brand-500 font-semibold font-body">View listings →</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Investment Buildings -->
+        <div class="group rounded-2xl overflow-hidden border border-surface-200 bg-white hover:shadow-xl transition-shadow duration-300 animate-slide-up delay-300">
+          <div class="h-52 relative overflow-hidden" style="background: linear-gradient(135deg, oklch(0.28 0.015 80) 0%, oklch(0.43 0.13 162 / 0.7) 100%);">
+            <div class="absolute inset-0 opacity-20" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(255,255,255,0.04) 20px, rgba(255,255,255,0.04) 40px);"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="text-xs font-semibold tracking-widest uppercase text-white/60 font-body">Bogotá · Chapinero</span>
+            </div>
+            <div class="absolute top-4 right-4">
+              <span class="text-xs font-semibold px-3 py-1 rounded-full text-white font-body" style="background: oklch(0.63 0.13 78 / 0.85);">Investment</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold font-display text-surface-900 group-hover:text-brand-500 transition-colors">Investment Buildings</h3>
+            <p class="mt-2 text-sm text-surface-800/60 leading-relaxed font-body">Boutique apartment buildings and mixed-use assets offering exceptional yields in Colombia's growing markets.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm font-semibold text-surface-800/50 font-body">From <strong class="text-surface-900">$800,000 USD</strong></span>
+              <span class="text-xs text-brand-500 font-semibold font-body">View listings →</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       WHY ALTURA — FEATURES GRID
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 lg:py-32 bg-surface-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-16 animate-slide-up">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase mb-4" style="color: oklch(0.73 0.14 78);">
+          <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+          Why Altura Living
+          <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-surface-900 font-display">
+          More than a listing service — a trusted advisor on the ground
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Feature 1 -->
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 hover:border-brand-400 hover:shadow-md transition-all duration-200 animate-slide-up delay-100">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: oklch(0.43 0.13 162 / 0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="oklch(0.43 0.13 162)">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-display text-surface-900 mb-2">Fully Bilingual</h3>
+          <p class="text-sm text-surface-800/60 leading-relaxed font-body">Our advisors work fluently in English and Spanish — no translation gaps, no missed details on contracts or legal terms.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 hover:border-brand-400 hover:shadow-md transition-all duration-200 animate-slide-up delay-200">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: oklch(0.73 0.14 78 / 0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="oklch(0.63 0.13 78)">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-display text-surface-900 mb-2">End-to-End Advisory</h3>
+          <p class="text-sm text-surface-800/60 leading-relaxed font-body">From first viewing to signed deed — we handle legal due diligence, currency transfers, tax guidance, and property management referrals.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 hover:border-brand-400 hover:shadow-md transition-all duration-200 animate-slide-up delay-300">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: oklch(0.43 0.13 162 / 0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="oklch(0.43 0.13 162)">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-display text-surface-900 mb-2">Curated, Not Aggregated</h3>
+          <p class="text-sm text-surface-800/60 leading-relaxed font-body">We personally inspect every property in our portfolio. You won't scroll through hundreds of mediocre listings — only Colombia's finest.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="bg-white rounded-2xl p-7 border border-surface-200 hover:border-brand-400 hover:shadow-md transition-all duration-200 animate-slide-up delay-400">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background: oklch(0.73 0.14 78 / 0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="oklch(0.63 0.13 78)">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-display text-surface-900 mb-2">Deep Local Knowledge</h3>
+          <p class="text-sm text-surface-800/60 leading-relaxed font-body">Our advisors live in the neighborhoods they sell. We know which buildings have the best views, the quietest floors, and the strongest appreciation history.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       HOW IT WORKS
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 lg:py-32 bg-surface-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-16 animate-slide-up">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase mb-4" style="color: oklch(0.73 0.14 78);">
+          <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+          The Process
+          <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-surface-900 font-display">
+          Three steps from inquiry to keys in hand
+        </h2>
+        <p class="mt-4 text-lg text-surface-800/60 leading-relaxed font-body">
+          We've designed the process specifically for international clients — no complicated paperwork, no language barriers, no hidden surprises.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 relative">
+        <!-- Connector line -->
+        <div class="hidden md:block absolute top-10 left-1/3 right-1/3 h-px" style="background: linear-gradient(90deg, transparent, oklch(0.73 0.14 78 / 0.4), transparent);"></div>
+
+        <!-- Step 1 -->
+        <div class="relative animate-slide-up delay-100">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold font-display text-white shadow-md" style="background: oklch(0.43 0.13 162);">1</div>
+            <div>
+              <h3 class="text-xl font-bold font-display text-surface-900 mb-3">Private Consultation</h3>
+              <p class="text-base text-surface-800/60 leading-relaxed font-body">
+                Tell us your ideal property — location, style, budget, and lifestyle. We listen carefully and match you with curated options within 48 hours.
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 ml-17 pl-5 border-l-2 border-surface-200 ml-[68px]">
+            <ul class="text-sm text-surface-800/50 space-y-1 font-body">
+              <li>✓ Video call or in-person meeting</li>
+              <li>✓ Bilingual advisor assigned</li>
+              <li>✓ Fully confidential</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative animate-slide-up delay-200">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold font-display text-white shadow-md" style="background: oklch(0.73 0.14 78);">2</div>
+            <div>
+              <h3 class="text-xl font-bold font-display text-surface-900 mb-3">Guided Property Tours</h3>
+              <p class="text-base text-surface-800/60 leading-relaxed font-body">
+                Tour in person or remotely via live video walkthroughs. We handle scheduling, transport, and building access — you simply experience each property.
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 ml-[68px]">
+            <ul class="text-sm text-surface-800/50 space-y-1 font-body">
+              <li>✓ Remote viewing available</li>
+              <li>✓ Neighborhood briefings included</li>
+              <li>✓ Honest assessments, no pressure</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative animate-slide-up delay-300">
+          <div class="flex items-start gap-5">
+            <div class="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold font-display text-white shadow-md" style="background: oklch(0.43 0.13 162);">3</div>
+            <div>
+              <h3 class="text-xl font-bold font-display text-surface-900 mb-3">Close With Confidence</h3>
+              <p class="text-base text-surface-800/60 leading-relaxed font-body">
+                We walk you through every legal step, coordinate with notaries, and stay alongside you through title transfer or lease signing — in your language.
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 ml-[68px]">
+            <ul class="text-sm text-surface-800/50 space-y-1 font-body">
+              <li>✓ Legal partner network</li>
+              <li>✓ Currency exchange guidance</li>
+              <li>✓ Post-sale property management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CITIES SECTION
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 lg:py-32" style="background: oklch(0.18 0.012 80);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-14 animate-slide-up">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase mb-4" style="color: oklch(0.73 0.14 78);">
+          <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+          Our Markets
+          <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">
+          Three cities. One standard of excellence.
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Medellín -->
+        <div class="rounded-2xl p-8 border transition-colors duration-200 animate-slide-up delay-100" style="border-color: oklch(0.73 0.14 78 / 0.3); background: oklch(0.22 0.014 80);">
+          <div class="text-4xl mb-4 font-display font-light text-white/20">01</div>
+          <h3 class="text-2xl font-bold font-display text-white mb-3">Medellín</h3>
+          <p class="text-sm text-white/55 leading-relaxed font-body mb-5">
+            The City of Eternal Spring. El Poblado, Laureles, and Envigado offer some of South America's best price-to-quality luxury real estate — with a thriving expat community and world-class dining.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full font-body" style="background: oklch(0.43 0.13 162 / 0.25); color: oklch(0.85 0.07 162);">El Poblado</span>
+            <span class="text-xs px-3 py-1 rounded-full font-body" style="background: oklch(0.43 0.13 162 / 0.25); color: oklch(0.85 0.07 162);">Laureles</span>
+            <span class="text-xs px-3 py-1 rounded-full font-body" style="background: oklch(0.43 0.13 162 / 0.25); color: oklch(0.85 0.07 162);">Envigado</span>
+          </div>
+        </div>
+
+        <!-- Bogotá -->
+        <div class="rounded-2xl p-8 border transition-colors duration-200 animate-slide-up delay-200" style="border-color: oklch(0.43 0.13 162 / 0.3); background: oklch(0.22 0.014 80);">
+          <div class="text-4xl mb-4 font-display font-light text-white/20">02</div>
+          <h3 class="text-2xl font-bold font-display text-white mb-3">Bogotá</h3>
+          <p class="text-sm text-white/55 leading-relaxed font-body mb-5">
+            Colombia's capital offers prestige addresses in Rosales, Chapinero, and La Cabrera — paired with exceptional cultural wealth, diplomatic community, and strong long-term investment fundamentals.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full font-body" style="background: oklch(0.43 0.13 162 / 0.25); color: oklch(0.85 0.07 162);">Rosales</span>
+            <span class="text-xs px-3 py-1 rounded-full font-body" style="background: oklch(0.43 0.13 162 / 0.25); color: oklch(0.85 0.07 162);">La Cabrera</span>
+            <span class="text-xs px-3 py-1 rounded-full font-body" style="background: oklch(0.43 0.13 162 / 0.25); color: oklch(0.85 0.07 162);">Chapinero</span>
+          </div>
+        </div>
+
+        <!-- Cartagena -->
+        <div class="rounded-2xl p-8 border transition-colors duration-200 animate-slide-up delay-300" style="border-color: oklch(0.73 0.14 78 / 0.3); background: oklch(0.22 0.014 80);">
+          <div class="text-4xl mb-4 font-display font-light text-white/20">03</div>
+          <h3 class="text-2xl font-bold font-display text-white mb-3">Cartagena</h3>
+          <p class="text-sm text-white/55 leading-relaxed font-body mb-5">
+            Colombia's crown jewel on the Caribbean coast. Historic walled city mansions, Bocagrande high-rises, and Isla Barú villas attract the most discerning international buyers seeking sun, history, and style.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full font-body" style="background: oklch(0.73 0.14 78 / 0.2); color: oklch(0.79 0.14 80);">Ciudad Amurallada</span>
+            <span class="text-xs px-3 py-1 rounded-full font-body" style="background: oklch(0.73 0.14 78 / 0.2); color: oklch(0.79 0.14 80);">Bocagrande</span>
+            <span class="text-xs px-3 py-1 rounded-full font-body" style="background: oklch(0.73 0.14 78 / 0.2); color: oklch(0.79 0.14 80);">Isla Barú</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       TESTIMONIALS / TRUST
+  ═══════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 lg:py-32 bg-surface-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-xl mx-auto mb-14 animate-slide-up">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase mb-4" style="color: oklch(0.73 0.14 78);">
+          <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+          Client Stories
+          <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-surface-900 font-display">
+          Trusted by buyers from New York to Amsterdam
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl p-8 border border-surface-200 shadow-sm animate-slide-up delay-100">
+          <div class="flex gap-1 mb-5">
+            <span style="color: oklch(0.73 0.14 78);">★★★★★</span>
+          </div>
+          <blockquote class="text-base text-surface-800/75 leading-relaxed font-body italic mb-6">
+            "We bought our penthouse in El Poblado entirely remotely from Miami. Altura handled everything — viewings on video call, the legal transfer, even helped us set up utilities. They made it feel completely safe and straightforward."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold font-display" style="background: oklch(0.43 0.13 162);">MR</div>
+            <div>
+              <p class="text-sm font-semibold text-surface-900 font-body">Michael R.</p>
+              <p class="text-xs text-surface-800/40 font-body">Miami, FL · Bought in Medellín 2023</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-surface-200 shadow-sm animate-slide-up delay-200">
+          <div class="flex gap-1 mb-5">
+            <span style="color: oklch(0.73 0.14 78);">★★★★★</span>
+          </div>
+          <blockquote class="text-base text-surface-800/75 leading-relaxed font-body italic mb-6">
+            "After six months of frustration with other agencies, Altura found us our Cartagena villa in three weeks. Their local knowledge is extraordinary — they knew details about each building that no listing site would ever show."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold font-display" style="background: oklch(0.63 0.13 78);">SV</div>
+            <div>
+              <p class="text-sm font-semibold text-surface-900 font-body">Sophie V.</p>
+              <p class="text-xs text-surface-800/40 font-body">Amsterdam · Renting in Cartagena 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border border-surface-200 shadow-sm animate-slide-up delay-300">
+          <div class="flex gap-1 mb-5">
+            <span style="color: oklch(0.73 0.14 78);">★★★★★</span>
+          </div>
+          <blockquote class="text-base text-surface-800/75 leading-relaxed font-body italic mb-6">
+            "Como colombiano viviendo en Bogotá, quería una segunda propiedad en Medellín. El equipo de Altura entendió exactamente lo que buscaba — discreción, calidad, y una inversión sólida. Superaron mis expectativas."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold font-display" style="background: oklch(0.43 0.13 162);">JC</div>
+            <div>
+              <p class="text-sm font-semibold text-surface-900 font-body">Jorge C.</p>
+              <p class="text-xs text-surface-800/40 font-body">Bogotá · Investment in Medellín 2024</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════════════════════════════ -->
+  <section id="contact" class="py-20 md:py-28 relative overflow-hidden">
+    <!-- Layered CTA background -->
+    <div class="absolute inset-0" style="background:
+      radial-gradient(ellipse at 30% 50%, oklch(0.73 0.14 78 / 0.15), transparent 55%),
+      radial-gradient(ellipse at 75% 30%, oklch(0.43 0.13 162 / 0.2), transparent 50%),
+      oklch(0.18 0.012 80);
+    "></div>
+
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.18em] uppercase mb-6" style="color: oklch(0.73 0.14 78);">
+        <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+        Start Your Search
+        <span class="w-5 h-px" style="background: oklch(0.73 0.14 78);"></span>
+      </span>
+
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white font-display leading-tight animate-slide-up">
+        Your finest address in Colombia<br/>
+        <em class="not-italic" style="color: oklch(0.73 0.14 78);">is waiting to be found.</em>
+      </h2>
+
+      <p class="mt-6 text-lg text-white/60 max-w-xl mx-auto leading-relaxed font-body font-light animate-slide-up delay-100">
+        Share your vision and we'll curate a shortlist of Colombia's best properties matching your lifestyle, budget, and timeline — within 48 hours.
+      </p>
+
+      <div class="mt-10 animate-slide-up delay-200 flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="mailto:hello@alturalivng.co"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-semibold text-base transition-all duration-200 hover:scale-[1.02] hover:shadow-lg"
+          style="background: oklch(0.73 0.14 78); color: oklch(0.12 0.008 80);"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+          </svg>
+          Email Us Privately
+        </a>
+        <a
+          href="https://wa.me/573001234567"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-semibold text-base transition-colors duration-150 border border-white/25 text-white hover:bg-white/10"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <p class="mt-5 text-sm text-white/35 font-body animate-slide-up delay-300">
+        Fully confidential · No commitment required · English & Spanish
+      </p>
+
+    </div>
+  </section>
+
 </Base>

@@ -1,11 +1,33 @@
 ---
 ---
-<header class="sticky top-0 z-50 border-b border-surface-200 bg-surface-50/80 backdrop-blur-lg">
+<header class="sticky top-0 z-50 border-b border-surface-200/80 bg-surface-50/90 backdrop-blur-lg">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <a href="/" class="text-lg font-bold tracking-tight text-surface-900 font-display">Your New Business</a>
-    <div class="flex items-center gap-6">
-      <a href="/blog" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors">Blog</a>
-      <a href="#cta" class="text-sm font-semibold bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-600 transition-colors">Get Started</a>
+
+    <!-- Wordmark -->
+    <a href="/" class="flex items-center gap-2.5 group">
+      <!-- Monogram mark -->
+      <div class="w-8 h-8 rounded-md flex items-center justify-center text-white text-xs font-bold font-display flex-shrink-0" style="background: oklch(0.43 0.13 162);">A</div>
+      <span class="text-lg font-bold tracking-tight text-surface-900 font-display">
+        Altura <span class="font-light">Living</span>
+      </span>
+    </a>
+
+    <!-- Nav links — desktop -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#listings" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors font-body">Properties</a>
+      <a href="#contact" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors font-body">Cities</a>
+      <span class="text-surface-200">|</span>
+      <span class="text-xs font-medium text-surface-800/40 font-body">EN · ES</span>
     </div>
+
+    <!-- CTA -->
+    <a
+      href="#contact"
+      class="text-sm font-semibold px-5 py-2.5 rounded-lg text-white transition-all duration-150 hover:opacity-90 font-body"
+      style="background: oklch(0.43 0.13 162);"
+    >
+      Private Consultation
+    </a>
+
   </nav>
 </header>
